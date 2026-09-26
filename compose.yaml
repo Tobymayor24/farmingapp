@@ -6,7 +6,7 @@ services:
     image: farm-manager
     container_name: farm-manager
     ports:
-      - "${FARM_MANAGER_PORT:-3000}:80"
+      - "${FARM_MANAGER_PORT:-3002}:80"
     restart: unless-stopped
     healthcheck:
       test: ["CMD-SHELL", "wget --spider --quiet http://localhost || exit 1"]
