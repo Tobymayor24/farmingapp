@@ -1,0 +1,16 @@
+services:
+  farm-manager:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: farm-manager
+    container_name: farm-manager
+    ports:
+      - "${FARM_MANAGER_PORT:-3000}:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget --spider --quiet http://localhost || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
