@@ -182,7 +182,7 @@ function HomePage() {
           </WelcomeImage>
         ))}
         <Overlay>
-          <h2>Welcome to the Agricultural Schemes Portal</h2>
+          <h2>Welcome to the Agricultural Schemes Portal of Prof Success</h2>
           <p>Find the latest schemes and benefits available for farmers.</p>
           <CTAButton href="#features">Explore Schemes</CTAButton>
         </Overlay>
